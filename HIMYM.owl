@@ -1,0 +1,822 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.HIMYM.com/ontologies/HIMYM.owl#"
+     xml:base="http://www.HIMYM.com/ontologies/HIMYM.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.HIMYM.com/ontologies/HIMYM.owl">
+        <rdfs:comment>A &quot;How I Met Your Mother&quot; TV show ontology that describes the characters and their relationships</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000025 -->
+
+    <owl:ObjectProperty rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000025">
+        <rdfs:label xml:lang="en">hasfriend</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000027 -->
+
+    <owl:ObjectProperty rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000027">
+        <rdfs:label xml:lang="en">hasspouse</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000028 -->
+
+    <owl:ObjectProperty rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000028">
+        <rdfs:label xml:lang="en">hassibling</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000029 -->
+
+    <owl:ObjectProperty rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000029">
+        <rdfs:label xml:lang="en">hasparent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000030 -->
+
+    <owl:ObjectProperty rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000030">
+        <rdfs:label xml:lang="en">hasboss</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000031 -->
+
+    <owl:ObjectProperty rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000031">
+        <rdfs:label xml:lang="en">hasdated</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000045 -->
+
+    <owl:ObjectProperty rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000045">
+        <rdfs:label xml:lang="en">workswith</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000001 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000001">
+        <owl:disjointWith rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000004"/>
+        <owl:disjointWith rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:isDefinedBy>An american television series that aired from 2005 to 2014.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">HIMYM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000004 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000004">
+        <owl:disjointWith rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:isDefinedBy>Characters that appear in every episode and are considered the &quot;Stars of the Show&quot;.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MainCharacters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000005 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000005">
+        <rdfs:isDefinedBy>Character that is not focused on by the primary storyline, but appears in the story enough to be more than a minor character.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000006 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000006">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000027"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000038"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000032"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000033"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000035"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>An architect and the central character to the series.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MainCharacterTedMosby</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000007 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000007">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000028"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000029"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000036"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000030"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000034"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000041"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000045"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>A wealthy womaniser with an unknown job.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MainCharacterBarneyStinson</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000008 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000008">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>A news anchor from Canada.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MainCharacterRobinScherbatsky</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000009 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000009">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000027"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000029"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000014"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000042"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>A kindergarden teacher and aspiring artist.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MainCharacterLilyAldrin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000010 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000010">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000027"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000029"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000030"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000045"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>A environmental lawyer from St. Cloud, Minnesota</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MainCharacterMarshallEriksen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000011 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000011">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000028"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000029"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000036"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">SupportingCharacterJamesStinson</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000012 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000012">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000014"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Lives in St. Cloud Minesota and is a stay at home mother.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterJudyErikson</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000013 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000013">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000029"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000029"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Marshall and Lily&apos;s Child.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterMarvinErikson</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000014 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000014">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:isDefinedBy>Boardgame Inventor, and Lily&apos;s father</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterMickeyAldrin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000015 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000015">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:isDefinedBy>Boss at Goliath National Bank with a habit of screeming at employees.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterArthurHobbs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000016 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000016">
+        <rdfs:isDefinedBy>Half brother of Barney.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Creators</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000017 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000017">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000016"/>
+        <owl:disjointWith rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000018"/>
+        <rdfs:isDefinedBy>American telivision writer and executive producer.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CreatedbyCarterBays</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000018 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000018">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000016"/>
+        <rdfs:isDefinedBy>American telivision writer.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CreatedbyCraigThomas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000019 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000019">
+        <rdfs:label xml:lang="en">StarringActors</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000020 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000020">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000019"/>
+        <rdfs:isDefinedBy>American actor.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">StarringActorJoshRadnor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000021 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000021">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000019"/>
+        <rdfs:isDefinedBy>American actor, screenwriter, producer, and author.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">StarringActorJasonSegel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000022 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000022">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000019"/>
+        <rdfs:isDefinedBy>Canadian actress and model.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">StarringActorCobieSmulders</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000023 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000023">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000019"/>
+        <rdfs:isDefinedBy>American actor, writer, producer, comedian, magician,a nd singer.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">StarringActorNeilPatrickHarris</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000024 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000024">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000019"/>
+        <rdfs:isDefinedBy>American Actress.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">StarringActorAlysonHannigan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000032 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000032">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:isDefinedBy>Pastry Chef.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterVictoria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000033 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000033">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:isDefinedBy>Activist/ philanthropist.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterZoey</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000034 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000034">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:isDefinedBy>News Reporter who works with Robin.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterNora</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000035 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000035">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:isDefinedBy>Doctor who lives in New Jersey.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterStella</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000036 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000036">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:isDefinedBy>Permiscuous mother of Barney and James</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterLorettaStinson</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000037 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000037">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000019"/>
+        <rdfs:isDefinedBy>American Actress.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">StarringActorCristinMilioti</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000038 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000038">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000027"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">MainCharacterTracyMcConnell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000039 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000039">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:isDefinedBy>Limo/taxi Driver.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterRanjitSingh</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000040 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000040">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000045"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000041"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>BartenderatMclarens</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterCarlthebartender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000041 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000041">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000045"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Waitress at Mclarens.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterWendythewaitress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000042 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000042">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Highschool boyfriend of Lily&apos;s.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterScooter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.HIMYM.owl/ontologies/HIMYM_0000043 -->
+
+    <owl:Class rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000043">
+        <rdfs:subClassOf rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000031"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000045"/>
+                <owl:someValuesFrom rdf:resource="http://www.HIMYM.owl/ontologies/HIMYM_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>News Reporter at Channel 1 news.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SupportingCharacterDonFrank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000001"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000004"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000005"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000016"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000006"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000007"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000008"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000009"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000010"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000011"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000012"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000013"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000014"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000015"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000011"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000012"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000013"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000014"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000015"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000032"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000033"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000034"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000035"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000036"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000011"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000012"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000013"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000014"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000015"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000032"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000033"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000034"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000035"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000036"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000039"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000040"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000041"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000042"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000043"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000020"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000021"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000022"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000023"/>
+            <rdf:Description rdf:about="http://www.HIMYM.owl/ontologies/HIMYM_0000024"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
